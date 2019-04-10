@@ -1,4 +1,5 @@
 
+/* SEE UPDATE OR WORKING CLOCK IN AISHA FOLDER
 document.addEventListener ("DOMContentLoaded", function(event) { 
 
     var HOURHAND = document.querySelector("#hour");
@@ -32,7 +33,8 @@ document.addEventListener ("DOMContentLoaded", function(event) {
         SECONDHAND.style.transform = 'rotate(' + secAngle  + 'deg)';  
     }
 setInterval (updateArmLocation, 1000); 
-  });
+  }); */
+
 
 /*var now = new Date (),
 hr = now.getHours (hour),

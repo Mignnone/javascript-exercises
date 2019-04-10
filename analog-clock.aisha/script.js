@@ -1,4 +1,3 @@
-
 document.addEventListener ("DOMContentLoaded", function(event) { 
 
     var HOURHAND = document.querySelector("#hour");
@@ -11,25 +10,26 @@ document.addEventListener ("DOMContentLoaded", function(event) {
         min = now.getMinutes (),
         sec = now.getSeconds ();
         
-        var hrAngle = ((hr * 30 + (min/60) *30 + (sec/3600) * 30) + (1/120)),
-        minAngle = ((min * 6 + (sec/60) *6 + (1/60)),
-        secAngle = ((sec * 6) + 6);
 
-        HOURHAND.style.transform = 'rotate(' + hrAngle  + 'deg)';
-        MINUTEHAND.style.transform = 'rotate(' + minAngle  + 'deg)';
-        SECONDHAND.style.transform = 'rotate(' + secAngle  + 'deg)';
+        var hrAngle = hr * 30 + (min/60) *30 + (sec/3600) * 30,
+        minAngle = min * 6 + (sec/60) *6 ,
+        secAngle = sec * 6;
+
+        adjusttime (hrAngle, minAngle, secAngle);
 
         function updateArmLocation () {  
             hrAngle += 1/120;
-            minAngle += 1/60
-            secAngle += 6
+            minAngle += 1/60;
+            secAngle += 6;
+
+            adjusttime (hrAngle, minAngle, secAngle);
             }
 
-        function adjusttime (hrAngle, minAngle, secAngle) {
+        function adjusttime (a, b, c) {
             
-        HOURHAND.style.transform = 'rotate(' + hrAngle  + 'deg)';
-        MINUTEHAND.style.transform = 'rotate(' + minAngle  + 'deg)';
-        SECONDHAND.style.transform = 'rotate(' + secAngle  + 'deg)';  
+        HOURHAND.style.transform = 'rotate(' + a + 'deg)';
+        MINUTEHAND.style.transform = 'rotate(' + b  + 'deg)';
+        SECONDHAND.style.transform = 'rotate(' + c  + 'deg)';  
     }
 setInterval (updateArmLocation, 1000); 
   });
@@ -95,6 +95,7 @@ function displayTime () {
 }
 }); */
 
+/* PHAM SOLUTION
 document.addEventListener("DOMContentLoaded", function(event) { 
     var now = new Date(),
         hr = now.getHours(),
@@ -123,4 +124,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     setInterval(updateArmsLocation, 1000);
 
-});
+}); */

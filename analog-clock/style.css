@@ -39,14 +39,14 @@
 
 .minute-arm {
     fill: none;
-    stroke: #000;
+    stroke: BLACK;
     stroke-width: 11;
     stroke-miterlimit: 10;
 }
 
 .second-arm {
     fill: none;
-    stroke: #000;
+    stroke: RED;
     stroke-width: 4;
     stroke-miterlimit: 10;
 }
@@ -64,3 +64,8 @@
     transform-origin: 300px 300px;
     transition: transform .5s ease-in-out;
 }
+
+/*element {
+    transform: rotate (360deg);
+    document.getElementById ('hour arm').css ('transform', 'rotate(' + i'deg)');
+}*/
